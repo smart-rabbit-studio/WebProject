@@ -4,5 +4,6 @@ server:
 spring:
   application:
     name: MavenProject
-
-
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
