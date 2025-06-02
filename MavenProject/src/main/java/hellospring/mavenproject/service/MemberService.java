@@ -2,6 +2,7 @@ package hellospring.mavenproject.service;
 
 import hellospring.mavenproject.domain.Member;
 import hellospring.mavenproject.repository.MemberRepository;
+import hellospring.mavenproject.repository.MemoryMemberRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,26 +10,26 @@ import java.util.Optional;
 
 @Service
 public class MemberService {
-    private final MemberRepository memberRepository;
+    private final MemoryMemberRepository memoryMemberRepository;
 
-    public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
+    public MemberService(MemoryMemberRepository memoryMemberRepository) {
+        this.memoryMemberRepository = memoryMemberRepository;
     }
 
     public Member save(Member member) {
-        return memberRepository.save(member);
+        return memoryMemberRepository.save(member);
     }
 
 
     public Optional<Member> findById(Long id) {
-        return memberRepository.findById(id);
+        return memoryMemberRepository.findById(id);
     }
 
     public Optional<Member> findByName(String name) {
-        return memberRepository.findByName(name);
+        return memoryMemberRepository.findByName(name);
     }
 
     public List<Member> findAll() {
-        return memberRepository.findAll();
+        return memoryMemberRepository.findAll();
     }
 }

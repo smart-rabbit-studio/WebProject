@@ -2,9 +2,11 @@
 <html lang="ko" xmlns:th="http://www.thymleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Main</title>
+        <script src="/member/js/js.js"></script>
     </head>
     <body>
-        <h1 th:text="${name}">dssssfsdf</h1>
+        <h1 th:text="${name}"></h1>
+        <a th:href="@{/web/member}">MEMBER 페이지 이동</a>
     </body>
 </html>

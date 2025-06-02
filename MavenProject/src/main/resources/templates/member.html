@@ -3,8 +3,38 @@
   <head>
       <meta charset="UTF-8">
       <title>Title</title>
+      <script src="/member/js/js.js"></script>
   </head>
   <body>
+    <h4>가입</h4>
+    <form id="memberForm">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" />
+        <button type="submit" id="memberBtn">가입</button>
+    </form>
 
+    <h4>가입정보 검색</h4>
+    <form id="searchMemberForm">
+        <label for="searchId">ID</label>
+        <input type="text" id="searchId" name="searchId" />
+        <label for="searchName">NA</label>
+        <input type="text" id="searchName" name="searchName" />
+        <button type="button" id="searchBtn">찾기</button>
+        <button type="button" id="searchAllBtn">찾기</button>
+    </form>
+    <h4>가입정보</h4>
+    <table id="printArea">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </table>
+    <h4>모든 가입정보</h4>
+    <table id="printAllArea">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+    </table>
   </body>
 </html>
